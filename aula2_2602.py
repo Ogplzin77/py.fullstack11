@@ -50,8 +50,8 @@ elif nota >= 40:
 else: 
        print ('reprovado')
 #################################################################
-    dia_da_semana = 3
-    dias = {
+dia_da_semana = 3
+dias = {
         1: "Domingo:",
         2: "Segunda:",
         3: "Terça",
@@ -60,4 +60,4 @@ else:
         6: "Sexta",
         7: "Sábado"
     }
-    print(dias[2])
+print(dias[2])

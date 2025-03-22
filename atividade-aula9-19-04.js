@@ -9,7 +9,7 @@ function somaarray (arr) { // A função somaArray(numeros) recebe um array de n
 
     let num = [142,2788,56,534,71,29]; //  Criamos um array.
 
-    let resultado =somaarray(num); // Passamos esse array para a função somaArray(num).
+    let= resultado =somaarray(num); // Passamos esse array para a função somaArray(num).
 
     console.log ("resultado"); // O método .reduce() soma todos os números. 
 

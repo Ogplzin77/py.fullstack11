@@ -9,7 +9,7 @@ function somaarray (arr) { // A função somaArray(numeros) recebe um array de n
 
     let num = [142,2788,56,534,71,29]; //  Criamos um array.
 
-    let= resultado =somaarray(num); // Passamos esse array para a função somaArray(num).
+    let resultado =somaarray(num); // Passamos esse array para a função somaArray(num).
 
     console.log ("resultado"); // O método .reduce() soma todos os números. 
 
@@ -45,7 +45,7 @@ function somaarray (arr) { // A função somaArray(numeros) recebe um array de n
     // Exemplo de uso:
     const numeros = [1, 2, 3, 4, 2, 3, 5, 6, 1]; //  O array  contém números repetidos.
 
-    const resultado = removerDuplicatas(numeros); // A função removerDuplicatas(numeros) retorna sem elementos duplicados.
+    const resultado2= removerDuplicatas(numeros); // A função removerDuplicatas(numeros) retorna sem elementos duplicados.
 
     console.log(resultado);  // resultado final 
     // Saída: [1, 2, 3, 4, 5, 6]    

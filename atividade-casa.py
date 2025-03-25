@@ -10,11 +10,11 @@ for i in range(4): # O programa solicita quatro notas ao usuário, que devem est
         nota = float(input(f"Digite a {i+1}ª nota novamente: "))
     notas.append(nota) #As notas inseridas são convertidas para float, em seguida somadas e divididas por 4 para obter a média.
 
-media = sum(notas) / (notas)
+media = sum (notas) / (notas)
 
 print(f"\nMédia: {media:.2f}")
 if media >= 7:
-    print("Aprovado") 
+    print("Aprovado")
 else:
     print("Reprovado")
 
@@ -74,10 +74,10 @@ R= float(input("Digite a taxa de juros anual (r) em porcentagem: ")) / 100  # ta
 T= float(input("Digite o tempo em anos (t): ")) # período de tempo (em anos) durante o qual os juros serão aplicados.
 
 # Calcula o montante final
-M = P * (1 + r * t) # (M) é o montante final (capital inicial + juros).  (P) é o valor principal. (R) é a taxa de juros anual, convertida para decimal. (T) é o tempo em anos.
+M =P * (1 + R * T) # (M) é o montante final (capital inicial + juros).  (P) é o valor principal. (R) é a taxa de juros anual, convertida para decimal. (T) é o tempo em anos.
 
 # Exibe o resultado
-print(f"O montante final após {t} anos será: R$ {M:.2f}") # O programa imprime o montante final (M) com duas casas decimais, usando a formatação {M:.2f}.
+print(f"O montante final após {T} anos será: R$ {M:.2f}") # O programa imprime o montante final (M) com duas casas decimais, usando a formatação {M:.2f}.
 
 
 #Contagem de Dígitos: Peça ao usuário um número inteiro positivo.

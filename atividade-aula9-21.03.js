@@ -301,5 +301,4 @@ const matrizExemplo = [
     [7, 8, 9]
 ];
 
-console.log(somaDasBordas(matrizExemplo)); // Saída: 40
-
+console.log(somaDasBordas(matrizExemplo)); 

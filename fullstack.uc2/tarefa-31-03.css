@@ -1,0 +1,27 @@
+body{
+    font-family: arial, helvetica, sans-serif;
+    background-color: rgb(139, 52, 219);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: rgba(51, 131, 223, 0.61);
+    padding: 30px;
+    box-shadow: 0 0 15px rgb(8, 8, 8);
+    border: 2px solid rgb(187, 163, 199);
+}
+
+h1,h2{
+    color:rgb(43, 97, 216);
+    margin-bottom:10px;
+}
+
+.header{
+    margin-bottom: 300px;
+    text-align: center;
+    border-bottom: 2px rgb(237, 241, 238)        
+}                 

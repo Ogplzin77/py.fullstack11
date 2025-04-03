@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculo online</title>
+    <link rel="stylesheet" href="curriculo.css">
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="header-container">
+      <div class="padding-div">
+
+      </div>
+      <div class="header">
+        <h1>Nome Completo</h1>
+        <p>Email: <a href="mailto:exemplo@gmail.com">exemplo@gmail.com</a></p>
+        <p>Telefone: (00) 00000-0000</p>
+        <p>
+          LinkedIn:
+          <a href="https://linkedin.com/In/exemplo" target="_blank"
+            >linkedin.com/In/exemplo</a
+          >
+        </p>
+      </div>
+    
+      <div class="img-div">   
+        <img style="width:200px; height: 200px;" src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg" alt="" width="200" height="300" srcset="">
+      </div>
+    </div>
+      <div class="section">
+        <h2>Resumo Profissional</h2>
+        <p>
+          Profissional dedidicado, com interesse em desenvolvimento web e
+          tecnologia. Buscando oportunidade profissional
+        </p>
+      </div>
+      <div class="section">
+        <h2>Formação Acadêmica</h2>
+        <p><strong>Curso:</strong>Análise e Desenvolvimento de Sistemas</p>
+        <p><strong>Instituição:</strong>Nome da Instituição</p>
+        <p><strong>Ano</strong> 2023 - 2025</p>
+      </div>
+      <div class="section">
+        <h2>Habilidades</h2>
+
+        <ul>
+          <li>HTML, CSS, Javascript</li>
+          <li>Git e Github</li>
+          <li>Python e PHP</li>
+          <li>Figma</li>
+          <li>Pacote Office</li>
+          <li>Banco de dados</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Idiomas</h2>
+        <p>Português: Nativo</p>
+        <p>Inglês: Básico</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+curriculo.css
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f5;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 200px;
+    height: 200px !important;
+    border-radius: 50%;
+}
+
+.header-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.padding-div{
+    width: 33.3%;
+}
+.img-div{
+    width: 33.3%;
+    text-align: center;
+}
+.container{
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0 1);
+    border: 1px solid black;
+    
+}
+
+h1, h2{
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.header{
+margin-bottom: 30px;
+text-align: center;
+border-bottom: 2px solid #2c3e50;
+}
+
+ .section{
+    margin-bottom: 25px;
+}
+
+ .section p {
+
+    margin: 5px 0;
+}
+
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+ul{
+    padding-left: 20px;
+}

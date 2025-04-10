@@ -1,0 +1,21 @@
+.navbar{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1717;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: linear-gradient(225deg, #214258 30%, #3e3f3f 100%);
+}

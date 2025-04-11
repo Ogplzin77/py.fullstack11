@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro -  Rlk Store</title>
+    <link rel= "icon" href="Rlk Store2.png"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body class="bg-light" >
+    <nav class="navbar navbar-expanded-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="loja.html">Loja </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="loja.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link " href="">Produto</a></li>
+                    <li class="nav-item"><a class="nav-link " href="https://api.whatsapp.com/send/?phone=5521998039740&text=&type=phone_number&app_absent=0">Suporte - FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link " href="login.html">Iniciar Sessão</a></li>
+                    
+
+                </ul>
+            </div>
+           
+        </div>
+
+    </nav>
+    <div class="container-fluid py-5">
+        <img src="Rlk Store2.png" alt="Rlk Store" width="110" height="70" class="d-inline-block align-text-top">
+        <div class=" w-50 p-10rounded shadow">
+        <h2 class="mb-4 text-center">Iniciar Cadastro</h2>
+
+        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+
+            <div class="mb-3"> <!-- Adicione o atributo "required" para tornar o campo obrigatório -->
+                <label for="username" class="form-label">Username:</label>
+                <div class="text-white text-center p-2"</div>
+                <input type="text" id="username" name="username" required class="form-control" placeholder="Digite seu username">
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <div class="text-white text-center p-2"</div>
+                <input type="text" id="email" name="email" class="form-control" required placeholder="Digite seu email">
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha:</label>
+                <div class="text-white text-center p-2"</div>
+                <input type="text" id="password" name="password" class="form-control" required placeholder="Digite sua senha">
+            </div>
+            
+            <div class="mb-3">
+                <label for="role" class="form-label">endereço:</label>
+                <div class="text-white text-center p-2"</div>
+                <input type="text" id="role" nome="role" class="form-control" required placeholder="Digite seu endereço"> <!-- Adicione o atributo "required" para tornar o campo obrigatório -->
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="reset" class="btn btn-outline-danger me-2">Limpar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+        </form>
+         </div>
+        
+    </div>
+       
+        </footer>
+    <script>
+       async function enviarCadastro(event){
+            event.preventDefault();
+
+            const dados = {
+
+                username: document.getElementById("username").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                role: document.getElementById("role").value,
+
+            };
+            
+            try {
+            const response = await fetch("http://localhost:808/auth/register", {
+                method:"POST",
+
+                headers: {
+                    "Content-type":"application/json"
+                },
+
+                body: JSON.stringify(dados)
+
+             });
+
+             if(response.ok){
+                const resultado = await response.json();
+                alert("Cadastro enviado com sucesso!");
+                console.log("Resposta da api", resultado);
+             }else{
+                alert("Erro ao enviar cadastro", response);
+
+             }
+            }catch(error){
+                alert("Erro desconhecido!");
+            }
+
+        }
+
+        document.querySelector("form").addEventListener("submit", enviarCadastro);
+    </script>
+    
+</body>
+</html>

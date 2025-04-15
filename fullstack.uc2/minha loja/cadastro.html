@@ -12,7 +12,7 @@
 <body class="bg-light" >
     <nav class="navbar navbar-expanded-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="loja.html">Loja </a>
+            <a class="navbar-brand" href="loja.html">Og Store </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,35 +30,97 @@
         </div>
 
     </nav>
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5"
         <img src="Rlk Store2.png" alt="Rlk Store" width="110" height="70" class="d-inline-block align-text-top">
         <div class=" w-50 p-10rounded shadow">
-        <h2 class="mb-4 text-center">Iniciar Cadastro</h2>
+        <h2 class="mb-4 text-white text-center">Iniciar Cadastro</h2>
 
         <form action="#" method="post" enctype="application/x-www-form-urlencoded">
 
             <div class="mb-3"> <!-- Adicione o atributo "required" para tornar o campo obrigatório -->
-                <label for="username" class="form-label">Username:</label>
-                <div class="text-white text-center p-2"</div>
+                <label for="username"  class="form-label text-white">Username:</label>
+                <div class=" text-center p-2"</div>
                 <input type="text" id="username" name="username" required class="form-control" placeholder="Digite seu username">
             </div>
             
             <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
+                <label for="email" class="form-label text-white">Email:</label>
                 <div class="text-white text-center p-2"</div>
                 <input type="text" id="email" name="email" class="form-control" required placeholder="Digite seu email">
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Senha:</label>
+                <label for="password" class="form-label text-white">Senha:</label>
                 <div class="text-white text-center p-2"</div>
-                <input type="text" id="password" name="password" class="form-control" required placeholder="Digite sua senha">
+                <input type="text" id="password" name="password" class="form-control " required placeholder="Digite sua senha">
             </div>
             
             <div class="mb-3">
-                <label for="role" class="form-label">endereço:</label>
+                <label for="role" class="form-label text-white">função:</label>
                 <div class="text-white text-center p-2"</div>
-                <input type="text" id="role" nome="role" class="form-control" required placeholder="Digite seu endereço"> <!-- Adicione o atributo "required" para tornar o campo obrigatório -->
+                <input type="text" id="role" nome="role" class="form-control " value="ROLE_USER"  required placeholder="Digite sua função"> <!-- Adicione o atributo "required" para tornar o campo obrigatório -->
+            </div>
+             <div class="mb-3 text-center" >
+                <label for="genero" class="form-label text-white">Genero:</label><br>
+                <div class="form-check form-check-inline text-white">
+                    <input type="radio" name="genero" id="masc" value="masculino">
+                    <label for="masc" form-check-label>Masculino</label>
+                </div>
+
+                <div class="form-check form-check-inline text-white">
+                    <input type="radio" name="genero" id="fem" value="feminino">
+                    <label for="fem" form-check-label>Feminino</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label text-white">
+                </label>
+                <select nome="estado" id="estado" class="form-select">
+                    <option selected disabled>Selecione um estado</option> 
+                    <option value="sp" >São Paulo</option>
+                    <option value="rj" >Rio de Janeiro</option>
+                    <option value="mg" >Minas Gerais</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Preferências:</label><br />
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="ofertas"
+                    name="preferencias[]"
+                    value="ofertas"
+                  />
+                  <label for="ofertas" class="form-check-label text-white"
+                    >Receber ofertas por e-mail</label
+                  >
+                </div>
+                <div class="form-check text-white">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="novidades"
+                    name="preferencias[]"
+                    value="novidades"
+                  />
+                  <label for="novidades" class="form-check-label text-white"
+                    >Receber novidades da loja</label
+                  >
+                </div>
+              </div>
+  
+              <div class="mb-3 text-center">
+                  <label for="foto" class="form-label text-white">Foto de perfil:</label>
+                  <input type="file" id="foto" name="foto" class="form-control">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="descricao" class="form-label text-white">Sobre você:</label>
+                  <textarea name="descricao" class="form-control" id="descricao" placeholder="Fale um pouco sobre você" rows="3"></textarea>
+              </div>
+  
             </div>
 
             <div class="d-flex justify-content-end">
@@ -69,8 +131,16 @@
          </div>
         
     </div>
-       
-        </footer>
+</div>
+</div>
+</div>
+<footer class="bg-dark text-white text-center py-1 fixed-bottom">
+    <p class="mb-7">Brasil
+        Política de Privacidade
+        Política de Cookies
+        Termos de Uso
+        © 2025 Rlk Store. Todos os direitos reservados. Fisia Comércio de Produtos Esportivos Ltda </p>
+    </footer>
     <script>
        async function enviarCadastro(event){
             event.preventDefault();
@@ -85,7 +155,7 @@
             };
             
             try {
-            const response = await fetch("http://localhost:808/auth/register", {
+            const response = await fetch("http://localhost:8080/auth/register", {
                 method:"POST",
 
                 headers: {

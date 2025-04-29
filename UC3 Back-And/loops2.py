@@ -6,8 +6,8 @@ while contador < 5: # Condição de parada
 
 # Loop com break e continue
 while True: # Loop infinito
-    resposta = input("Digite 'sair' para terminar: ") # Entrada de dados
-    if resposta.lower() == 'sair': # Condição de parada lower() converte para minúsculo
+    resposta = input("Digite 'ok' para começar: ") # Entrada de dados
+    if resposta.lower() == 'ok': # Condição de parada lower() converte para minúsculo
         break # Encerra o loop
     elif resposta == '': # Condição de parada vazia
         continue # Continua o loop

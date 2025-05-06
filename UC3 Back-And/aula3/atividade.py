@@ -1,5 +1,4 @@
-import json # O módulo json que é usado para converter o dicionário de tarefas para uma representação em JSON (formato de texto estruturado, legível e usado em APIs/web).
-
+import json
 # Dicionário de tarefas
 tarefas = {
     1: {"titulo": "Estudar Python", "status": "pendente"}, # Dicionário de tarefas com duas tarefas

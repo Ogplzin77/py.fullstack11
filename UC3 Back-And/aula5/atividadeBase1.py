@@ -14,18 +14,18 @@ Requisitos:
 # Herde de Livro e adicione o formato do e-book e formas de download.
 
 class Livro:
-    def __init__(self, titulo, autor, ano,):
+    def __init__(self, titulo, autor, ano,): #Método construtor __init__ para inicializar o livro com título, autor e ano.
         self.titulo = titulo
         self.autor = autor
         self.ano = ano
 
-    def __str__(self):
-        return f"{self.titulo} por {self.autor} ({self.ano})"
+    def __str__(self): #Método especial __str__ para representação legível para humanos. 
+        return f"{self.titulo} por {self.autor} ({self.ano})" #Retorna uma string formatada com o título, autor e ano do livro.
 
 
 class Usuario:
-    def __init__(self, nome, identificador):
-        self.nome = nome
+    def __init__(self, nome, identificador): #Método construtor __init__ para inicializar o usuário com nome e identificador.
+        self.nome = nome #Atributo da classe Usuario que representa o nome do usuário. 
         self.identificador = identificador
 
     def __str__(self):
@@ -33,7 +33,7 @@ class Usuario:
 
 
 class Emprestimo:
-    def __init__(self, livro, usuario, data_emprestimo, data_devolucao=None):
+    def __init__(self, livro, usuario, data_emprestimo, data_devolucao=None): 
         self.livro = livro
         self.usuario = usuario
         self.data_emprestimo = data_emprestimo

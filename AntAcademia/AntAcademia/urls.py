@@ -16,13 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from appAntAcademia.views import home
+from appAntAcademia.views import home, produtos, contatos
 #from appAntAcademia.views import end
   # Importe a view aqui!!!
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home), 
-    #path('',end), # Rota principal aqui!!!
+
+    path('', home, name='home'),
+
+    path('produtos/', produtos, name='produtos'),
+    
+    path ('contatos/', contatos, name='contatos')
 ]
-from django.contrib import admin
-from django.urls import path
+

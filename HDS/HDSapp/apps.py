@@ -1,12 +1,5 @@
-from django import forms
-from .models import Produto, UserProfile
+from django.apps import AppConfig
 
-class ProdutoForm(forms.ModelForm):
-    class Meta:
-        model = Produto
-        fields = ['nome', 'imagem', 'preco']  # Campos do formulário
-
-class ProfileForm(forms.ModelForm):
-    class Meta:
-        model = UserProfile
-        fields = ['profile_pic']  # Apenas o campo de foto
+class AppConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'HDSapp'

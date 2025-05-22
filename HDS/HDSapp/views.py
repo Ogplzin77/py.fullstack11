@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from .models import Produto
+from .models import Produto, UserProfile
 from django.conf import settings
 from .forms import ProdutoForm, ProfileForm
 import os

@@ -11,11 +11,14 @@
 {% endwith %}
 {% endwith %}
 
+{% load static %}
+
 <div class="container mt-4">
     <section class="banner text-center p-5 bg-light rounded-3 mb-4">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h1 class="display-4 fw-bold">Sua jornada começa aqui</h1>
+                <img src="{% static 'img/logo1.png' %}" alt="Logo" width="200">
+                <h1 class="display-4 fw-bold">ACADEMIA DE MACHO!</h1>
                 <p class="lead">
                     <a href="{% url 'produtos' %}" class="btn btn-primary btn-lg mx-2">Ver Produtos</a>
                     <a href="{% url 'contatos' %}" class="btn btn-outline-secondary btn-lg mx-2">Contato</a>

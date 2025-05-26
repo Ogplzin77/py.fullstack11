@@ -1,0 +1,17 @@
+/* HDSapp/static/meuapp/css/styles.css */
+:root {
+    --primary-color: #0d0e0d;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+

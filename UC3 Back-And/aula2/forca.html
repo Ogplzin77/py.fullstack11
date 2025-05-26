@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Forca</title> 
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: rgba(193, 191, 189, 0.418); } 
+    #palavra { font-size: 2em; letter-spacing: 20px; }
+    #letras { margin-top: 20px; }
+    #letras button { margin: 5px; }
+    #mensagem { margin-top: 20px; color: rgb(0, 255, 64); }
+    #tentativas { font-weight: bold; }
+    .acertou { color: green; }
+    .errou { color: red; }  
+  </style>
+</head>
+<body>
+
+  <h1>Jogo da Forca</h1> <!-- Definindo o titulo do site -->
+  <div id="palavra">_ _ _ _ _</div> <!-- Div para exibir a palavra -->
+  <p>Tentativas restantes: <span id="tentativas">10</span></p> <!-- Div para exibir o número de tentativas restantes -->
+  <input type="text" id="entrada" maxlength="2" placeholder="Digite uma letra"> <!-- Campo de entrada de dados -->
+  <button onclick="tentarLetra()">Tentar</button> <!-- Botão para tentar a letra -->
+  <div id="mensagem"></div> 
+
+  <script>
+    const palavras = ["python", "programacao", "computador", "algoritmo", "desenvolvimento" ,"software" ,"javascript" ,"teclado" ,"mouse" ,"monitor" ,"hardware"]; 
+    const palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
+    const letrasCorretas = new Set();
+    const letrasTentadas = new Set();
+    let tentativas = 8;
+
+    function atualizarPalavraExibida() {
+      const exibida = palavraSecreta.split('').map(letra =>
+        letrasCorretas.has(letra) ? letra : "_"
+      ).join(' ');
+      document.getElementById("palavra").textContent = exibida;
+      return exibida.replace(/ /g, "") === palavraSecreta;
+    }
+
+    function tentarLetra() {
+      const entrada = document.getElementById("entrada");
+      const letra = entrada.value.toLowerCase();
+      entrada.value = "";
+
+      if (!letra.match(/^[a-z]$/i)) {
+        document.getElementById("mensagem").textContent = "Digite apenas uma letra.";
+        return;
+      }
+
+      if (letrasTentadas.has(letra)) {
+        document.getElementById("mensagem").textContent = "Você já tentou essa letra.";
+        return;
+      }
+
+      letrasTentadas.add(letra);
+
+      if (palavraSecreta.includes(letra)) {
+        letrasCorretas.add(letra);
+        document.getElementById("mensagem").textContent = "Letra correta!";
+      } else {
+        tentativas--;
+        document.getElementById("tentativas").textContent = tentativas;
+        document.getElementById("mensagem").textContent = "Letra incorreta!";
+      }
+
+      if (atualizarPalavraExibida()) {
+        document.getElementById("mensagem").textContent = "Parabéns! Você venceu!";
+        document.getElementById("entrada").disabled = true;
+      } else if (tentativas <= 0) {
+        document.getElementById("mensagem").textContent = `Game over! A palavra era: ${palavraSecreta}`;
+        document.getElementById("entrada").disabled = true;
+      }
+    }
+
+    atualizarPalavraExibida(); // Inicializa a exibição
+  </script>
+
+</body>
+</html>

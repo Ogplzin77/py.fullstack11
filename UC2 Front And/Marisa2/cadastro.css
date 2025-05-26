@@ -1,0 +1,25 @@
+.navbar{
+    width: 110%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1717;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.container-fluid{
+  
+    background: linear-gradient(125deg, #214258 30%, #3e3f3f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1717;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}

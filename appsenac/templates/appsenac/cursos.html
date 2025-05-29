@@ -1,0 +1,35 @@
+{% extends 'appsenac/base.html' %}
+
+{% block title %}Cursos{% endblock %}
+
+{% block content %}
+
+
+{% with "Cursos" as header_title %}
+{% with "Conheça nossos cursos" as header_subtitle %}
+{% include 'appsenac/partials/_header.html' %}
+{% endwith %}
+{% endwith %}
+
+</div>
+    <div class="row">
+        {% for curso in cursos %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ curso.nome }}</h5>
+                    <p class="card-text flex-grow-1">{{ curso.descricao }}</p>
+                    <div class="mt-auto">
+                        <p class="text-success fw-bold mb-2">R$ {{ curso.preco }}</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info" role="alert">
+                curso em Full-Stack em breve
+            </div>
+        </div>
+        {%endfor%}

@@ -1,0 +1,43 @@
+{% extends 'appsenac/base.html' %}
+
+{% block title %}Cursos{% endblock %}
+
+{% with "Fale comigo" as header_title %}
+
+{% with "Estamos aqui para ajudar" as header_subtitle %}
+    {% include 'appsenac/partials/_header.html' %}
+{% endwith %}
+{% endwith %}
+
+<div class="container mt-4">
+<div class="row">
+    <div class ="col-12">
+        <div class="alert alert-info" role="alert">
+            <h1 class="h4 card-title">Fale comigo</h1>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-envelope me-2"></i> senac@empresa.com</li>
+                <li class="mb-2"><i class="bi bi-phone me-2"></i> (21) 1234-5678</li>
+                <li><i class="bi bi-clock me-2"></i> Seg-Sex: 9h às 22h</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+{% endblock %}

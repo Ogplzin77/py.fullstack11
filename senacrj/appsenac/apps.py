@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class AppsenacConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'appsenac'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "appsenac"

@@ -1,0 +1,37 @@
+<!-- cadastro.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - InteliCursos</title>
+    <link rel="stylesheet" href="{% static 'appsenac/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>InteliCursos</h1>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'lista_cursos' %}">Cursos</a>
+            <a href="{% url 'cadastro' %}">Cadastro</a>
+            <a href="{% url 'contato' %}">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastro</h2>
+        {% if messages %}
+            {% for message in messages %}
+                <p class="mensagem">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <form method="post" class="formulario">
+            {% csrf_token %}
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+</body>
+</html>

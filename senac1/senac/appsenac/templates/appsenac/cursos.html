@@ -1,0 +1,66 @@
+<!-- cursos.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos os Cursos - InteliCursos</title>
+    <link rel="stylesheet" href="{% static 'appsenac/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>InteliCursos</h1>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'lista_cursos' %}">Cursos</a>
+            <a href="{% url 'cadastro' %}">Cadastro</a>
+            <a href="{% url 'contato' %}">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>todos os Cursos</h2>
+        <div class="cursos">
+
+            <div class="curso">
+                <img src="{% static 'appsenac/img/python.webp' %}" alt="Curso de Python">
+                <h3>Curso de Python</h3>
+                <p>Torne-se um Programador full stack (front-end + back-end) aprendendo a desenvolver desde a base da lógica de programação até a capacidade de programar aplicações web utilizando a linguagem Python. Duração: 168h.</p>
+            </div>
+
+            <div class="curso">
+                <img src="{% static 'appsenac/img/front.webp' %}" alt="Programador Front-End com IA">
+                <h3>Programador Front-End com IA</h3>
+                <p>Domine as ferramentas do futuro e maximize seu potencial! Desbloqueie o poder da IA e torne-se um expert em programação front-end com inteligência artificial..</p>
+            </div>
+
+            <div class="curso">
+                <img src="{% static 'appsenac/img/dados.webp' %}" alt="Curso de Data Science">
+                <h3>Analista de Dados</h3>
+                <p>Big Data Science do Senac RJ. Aprenda Phyton, estatística, visualização de dados e destaque-se no mercado de trabalho digital.</p>
+            </div>
+
+            <div class="curso">
+                <img src="{% static 'appsenac/img/excel.webp' %}" alt="Curso de Excel Avançado">
+                <h3>Curso de Excel Avançado</h3>
+                <p>Curso de Excel Senac RJ com aulas práticas para você criar planilhas completas, com fórmulas, gráficos e formatação. Ideal para sua carreira.</p>
+            </div>
+
+             <div class="cursos">
+            <div class="curso">
+                <img src="{% static 'appsenac/img/back.webp' %}" alt="Curso de backand">
+                <h3>Desenvolvedor back-end .NET</h3>
+                <p>Torne-se um Desenvolvedor back-end .NET e domine uma das linguagens de programação mais utilizadas em todo o mundo. Duração: 84h </p>
+            </div>
+
+             <div class="cursos">
+            <div class="curso">
+                <img src="{% static 'appsenac/img/php.webp' %}" alt="Curso de PHP">
+                <h3>Programação em PHP</h3>
+                <p>Torne-se um Programador full stack (back-end e front-end) aprendendo a desenvolver desde a base da lógica de programação até a capacidade de programar aplicações web utilizando a linguagem PHP. Duração: 168h</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

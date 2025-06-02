@@ -1,0 +1,18 @@
+.navbar1 {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: baseline;     /* Alinha verticalmente */
+    gap: 30px;               /* Espaço entre logo e links */
+    padding: 10px 20px;
+}
+
+.logo1 img {
+    height: 60px; /* ajuste o tamanho da logo conforme necessário */
+}
+
+/* Estilização opcional para deixar os links alinhados */
+nav1 {
+    display: flex;
+    gap: 20px;
+}
+

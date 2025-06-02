@@ -1,0 +1,76 @@
+{% extends 'HDSapp/base.html' %}
+
+{% block title %}Academia Gangster{% endblock %}
+
+{% block content %}
+
+<!-- Header personalizado para a home -->
+{% with "Bem-vindo ao nosso site" as header_title %}
+{% with "Conheça nossos produtos ou fale conosco" as header_subtitle %}
+    {% include 'HDSapp/partials/_header.html' %}
+{% endwith %}
+{% endwith %}
+
+{% load static %}
+
+</header>
+
+    <section class="hero">
+        <h2>Treine como um gangster. Supere seus limites.</h2>
+        <a href="contatos.html" class="btn">Matricule-se agora!</a>
+        <div class="cards-container">
+    <div class="card">
+        <a href="produtos.html">
+            <img src="{% static 'img/logo2.png' %}" alt="Musculação">
+            <a href="{% url 'home' %}"></a>
+            <h3>Musculação</h3>
+        </a>
+    </div>
+    <div class="card">
+        <a href="produtos.html">
+            <img src="{% static 'img/lutas.png' %}" alt="Lutas">
+            <a href="{% url 'home' %}"></a>
+            <h3>Lutas</h3>
+        </a>
+    </div>
+    <div class="card">
+        <a href="produtos.html">
+            <img src="{% static 'img/personal.png' %}" alt="Personal Trainer">
+            <a href="{% url 'home' %}"></a>
+            <h3>Personal</h3>
+        </a>
+    </div>
+    <div class="card">
+        <a href="produtos.html">
+            <img src="{% static 'img/nutricao.png' %}" alt="Nutrição">
+           <a href="{% url 'home' %}"></a>
+            <h3>Nutrição</h3>
+        </a>
+    </div>
+</div>
+
+    </section>
+
+    <section id="sobre">
+          </a>
+    </div>
+    <div class="card">
+      <h2>Sobre a Academia</h2>
+        <p>Academia Gangster oferece estrutura de ponta, 
+            treinos intensos e uma comunidade focada em resultados.</p>
+             <a href="contatos.html" class="btn">Seja um Gangster!</a>
+        
+        </a>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Musculação completa</li>
+            <li>Aulas de Muay Thai e Jiu-Jitsu</li>
+            <li>Treinos personalizados</li>
+            <li>Nutricionista e avaliação física</li>
+        </ul>
+    </section>
+
+{% endblock %}

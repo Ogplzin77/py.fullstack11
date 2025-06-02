@@ -1,0 +1,17 @@
+{% load static %}
+
+<header>
+    <div class="">
+        <!-- Logo com link para a página inicial -->
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/Gangster.logo1.png' %}" alt="Logo">
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        </a>
+
+        <nav>
+            <a href="{% url 'home' %}">Início</a>
+            <a href="{% url 'produtos' %}">Produtos</a>
+            <a href="{% url 'contatos' %}">Contato</a>
+        </nav>
+    </div>
+</header>

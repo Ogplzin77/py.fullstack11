@@ -1,0 +1,79 @@
+{% extends 'HDSapp/base.html' %}
+
+{% block title %}Nossos Produtos{% endblock %}
+
+{% block content %}
+
+<!-- Header personalizado para produtos -->
+{% with "Nossos Produtos" as header_title %}
+{% with "Conheça nossa linha completa" as header_subtitle %}
+    {% include 'HDSapp/partials/_header.html' %}
+{% endwith %}
+{% endwith %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+
+    <section id="planos">
+        <h2>Nossos Planos</h2>
+        <div class="cards-container">
+            <div class="card-plano">
+                <h3>Plano Mensal</h3>
+                <p>R$ 129,90/mês</p>
+                <ul>
+                    <li>Acesso total à academia</li>
+                    <li>Aulas coletivas inclusas</li>
+                </ul>
+                <a href="" class="btn">Assinar</a>
+
+            </div>
+            <div class="card-plano destaque">
+                <h3>Plano Trimestral</h3>
+                <p>R$ 109,90/mês</p>
+                <ul>
+                    <li>+ Avaliação física grátis</li>
+                    <li>Acesso a treinos personalizados</li>
+                </ul>
+                <a href="#" class="btn">Assinar</a>
+            </div>
+            <div class="card-plano">
+                <h3>Plano Anual</h3>
+                <p>R$ 89,90/mês</p>
+                <ul>
+                    <li>Personal incluso 1x/semana</li>
+                    <li>Brinde especial</li>
+                </ul>
+                <a href="#" class="btn">Assinar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <h2>Produtos</h2>
+        <div class="cards-container">
+            <div class="card-produto">
+                <img src="whey.jfif" alt="Whey Protein">
+                <h3>Whey Protein</h3>
+                <p>R$ 159,90</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="card-produto">
+                <img src="" alt="Creatina">
+                <h3>Creatina</h3>
+                <p>R$ 99,90</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="card-produto">
+                <img src="" alt="Luvas de Treino">
+                <h3>Luvas de Treino</h3>
+                <p>R$ 49,90</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+{% endblock %}

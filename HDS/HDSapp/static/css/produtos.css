@@ -1,0 +1,91 @@
+:root {
+  --preto: #0d0d0d;
+  --dourado: #d4af37;
+  --cinza-escuro: #1a1a1a;
+  --branco-suave: #f5f5f5;
+}
+
+.planos-produtos-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--preto);
+  color: var(--dourado);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.planos-produtos-container h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--dourado);
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: var(--cinza-escuro);
+  border: 1px solid var(--dourado);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: var(--branco-suave);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 12px;
+}
+
+.card .preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dourado);
+}
+
+.card button {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background-color: #caa434;
+}
+
+.card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.destaque {
+  border: 2px solid #ffd700;
+  background-color: #262010;
+}

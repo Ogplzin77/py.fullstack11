@@ -1,22 +1,119 @@
 <!-- cursos.html -->
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Todos os Cursos - InteliCursos</title>
-    <link rel="stylesheet" href="{% static 'appsenac/style.css' %}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cursos | Inteli Cursos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00bfa6;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfa6;
+    }
+
+    .cursos {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cursos h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #00796b;
+    }
+
+    .curso-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .curso {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .curso:hover {
+      transform: translateY(-5px);
+    }
+
+    .curso h3 {
+      color: #00bfa6;
+      margin-bottom: 10px;
+    }
+
+    .curso p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .cursos h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>InteliCursos</h1>
-        <nav>
-            <a href="{% url 'index' %}">Início</a>
-            <a href="{% url 'lista_cursos' %}">Cursos</a>
-            <a href="{% url 'cadastro' %}">Cadastro</a>
-            <a href="{% url 'contato' %}">Contato</a>
-        </nav>
-    </header>
+
+<header>
+  <h1>Inteli Cursos</h1>
+  <nav>
+    <a href="{% url 'index.html' %}">Início</a>
+    <a href="{% url 'cursos.html' %}">Cursos</a>
+    <a href="{% url 'contatos.html' %}">Contato</a>
+    <a href="{% url 'cadastro.html' %}">Cadastrar</a>
+  </nav>
+</header>
 
     <main>
         <h2>todos os Cursos</h2>

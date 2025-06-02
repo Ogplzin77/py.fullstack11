@@ -1,35 +1,144 @@
 <!-- index.html -->
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>InteliCursos</title>
-    <link rel="stylesheet" href="{% static 'appsenac/style.css' %}">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inteli Cursos | Sua plataforma de aprendizado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-        footer {
-            background-color:rgb(245, 245, 245);
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #555;
-            border-top: 1px solid #ddd;
-        }
-        .footer-links {
-            margin-top: 0.5rem;
-        }
-        .footer-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color:rgb(239, 241, 243);
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00bfa6;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfa6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #00bfa6, #00796b);
+      color: #fff;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      background: #fff;
+      color: #00796b;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #e0f2f1;
+    }
+
+    .cursos {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cursos h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .curso-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .curso {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .curso:hover {
+      transform: translateY(-5px);
+    }
+
+    .curso h4 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .curso p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
 <body>
+
     <header>
         <h1>InteliCursos</h1>
         <p>Plataforma de cursos online para você evoluir!</p>
@@ -43,7 +152,6 @@
 
 
     <main>
-        <h2>Cursos em destaque</h2>
         <div class="cursos">
 
             <div class="curso">
